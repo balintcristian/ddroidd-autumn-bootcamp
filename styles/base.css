@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("/assets/fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("/assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Medium";
+  src: url("/assets/fonts/OpenSans/OpenSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("/assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("/assets/fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("/assets/fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  /* Colors */
+  --white:             #FFFFFF;
+  --black:             #000000;
+  --athens-gray:       #F4F5F8;
+  --dove-gray:         #707070;
+  --school-bus-yellow: #FFE000;
+  --prussian-blue:     #003C55;
+
+  /* Fonts */
+  --font-family-light:    'OpenSans-Light';
+  --font-weight-light:   300;
+
+  --font-family-regular:    'OpenSans-Regular';
+  --font-weight-regular:   400;
+
+  --font-family-medium:    'OpenSans-Medium';
+  --font-weight-medium:   500;
+
+  --font-family-bold:    'OpenSans-Bold';
+  --font-weight-bold:   700;
+}
+
+
+body {
+  font-family: var(--font-family-regular);
+  font-weight: var(--font-weight-regular);
+}
+
+/* _-_-_- base/RESET -_-_-_ */
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a{
+  text-decoration-line: none;
+}
+
+
