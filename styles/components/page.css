@@ -1,0 +1,7 @@
+.page {
+  grid-area: page;
+  height: 100%;
+  background-color: var(--athens-gray);
+  width: 70%;
+  margin: 0 auto;
+}

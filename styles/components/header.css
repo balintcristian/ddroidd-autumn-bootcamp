@@ -1,0 +1,6 @@
+.header {
+  grid-area: header;
+  background-color: var(--prussian-blue);
+  height: 115px;
+  width: 100%;
+}

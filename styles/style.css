@@ -1,0 +1,23 @@
+@import "./base.css";
+@import "./components/footer.css";
+@import "./components/header.css";
+@import "./components/page.css";
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.app-body {
+  display: grid;
+  grid-template-areas: "header" "page" "footer";
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100vh;
+}

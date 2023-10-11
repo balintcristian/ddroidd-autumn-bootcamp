@@ -38,27 +38,26 @@
 
 :root {
   /* Colors */
-  --white:             #FFFFFF;
-  --black:             #000000;
-  --athens-gray:       #F4F5F8;
-  --dove-gray:         #707070;
-  --school-bus-yellow: #FFE000;
-  --prussian-blue:     #003C55;
+  --white: #ffffff;
+  --black: #000000;
+  --athens-gray: #f4f5f8;
+  --dove-gray: #707070;
+  --school-bus-yellow: #ffe000;
+  --prussian-blue: #003c55;
 
   /* Fonts */
-  --font-family-light:    'OpenSans-Light';
-  --font-weight-light:   300;
+  --font-family-light: "OpenSans-Light";
+  --font-weight-light: 300;
 
-  --font-family-regular:    'OpenSans-Regular';
-  --font-weight-regular:   400;
+  --font-family-regular: "OpenSans-Regular";
+  --font-weight-regular: 400;
 
-  --font-family-medium:    'OpenSans-Medium';
-  --font-weight-medium:   500;
+  --font-family-medium: "OpenSans-Medium";
+  --font-weight-medium: 500;
 
-  --font-family-bold:    'OpenSans-Bold';
-  --font-weight-bold:   700;
+  --font-family-bold: "OpenSans-Bold";
+  --font-weight-bold: 700;
 }
-
 
 body {
   font-family: var(--font-family-regular);
@@ -68,28 +67,40 @@ body {
 /* _-_-_- base/RESET -_-_-_ */
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
 body {
-  line-height: 1;
   margin: 0;
   padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
@@ -98,8 +109,10 @@ table {
   border-spacing: 0;
 }
 
-a{
+a {
   text-decoration-line: none;
 }
 
-
+* {
+  box-sizing: border-box;
+}
