@@ -1,12 +1,69 @@
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import Button from "../components/Button";
+import { useEffect, useState } from "react";
 
 const Form = () => {
   const {
     register,
+    control,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const [countries, setCountries] = useState([]);
+  const selectedCountry = useWatch({ control, name: "country" });
+  const [states, setStates] = useState([]);
+  const selectedState = useWatch({ control, name: "state" });
+  const [cities, setCities] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        "https://countriesnow.space/api/v0.1/countries/positions"
+      );
+      const newData = await response.json();
+      setCountries(newData.data.map((country) => country.name));
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        "https://countriesnow.space/api/v0.1/countries/states",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ country: selectedCountry }),
+        }
+      );
+      const newData = await response.json();
+      setStates(newData.data.states.map((state) => state.name));
+    };
+
+    fetchData();
+  }, [selectedCountry]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        "https://countriesnow.space/api/v0.1/countries/state/cities",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            country: selectedCountry,
+            state: selectedState,
+          }),
+        }
+      );
+      const newData = await response.json();
+      setCities(newData.data);
+    };
+
+    fetchData();
+  }, [selectedState]);
 
   const onSubmit = (data) => console.log(data);
 
@@ -90,22 +147,38 @@ const Form = () => {
             <label htmlFor="country">
               Country<span>*</span>
             </label>
-            <select name="country" id="country" defaultValue="romania">
-              <option value="romania">Romania</option>
-              <option value="romania">Romania</option>
-              <option value="romania">Romania</option>
-              <option value="romania">Romania</option>
+            <select {...register("country")} id="country">
+              {countries &&
+                countries.map((country, idx) => (
+                  <option key={idx} value={country}>
+                    {country}
+                  </option>
+                ))}
             </select>
           </div>
           <div className="input-wrapper">
             <label htmlFor="state">State</label>
-            <select name="state" id="state"></select>
+            <select {...register("state")} id="state">
+              {states &&
+                states.map((state, idx) => (
+                  <option key={idx} value={state}>
+                    {state}
+                  </option>
+                ))}
+            </select>
           </div>
           <div className="input-wrapper">
             <label htmlFor="city">
               City<span>*</span>
             </label>
-            <select name="city" id="city"></select>
+            <select {...register("city")} id="city">
+              {cities &&
+                cities.map((city, idx) => (
+                  <option key={idx} value={city}>
+                    {city}
+                  </option>
+                ))}
+            </select>
           </div>
         </div>
 
