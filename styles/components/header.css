@@ -3,4 +3,22 @@
   background-color: var(--prussian-blue);
   height: 115px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 36px;
+}
+.header img {
+  width: 206px;
+}
+.header p {
+  color: var(--white);
+  font-size: 48px;
+  font-family: var(--font-family-regular);
+  font-weight: var(--font-weight-regular);
+}
+
+.header .button-container {
+  width: 239px;
+  height: 47px;
 }

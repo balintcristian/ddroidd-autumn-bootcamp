@@ -2,7 +2,8 @@
 @import "./components/footer.css";
 @import "./components/header.css";
 @import "./components/page.css";
-
+@import "./components/button.css";
+@import "./pages/home.css";
 body {
   margin: 0px;
   padding: 0px;

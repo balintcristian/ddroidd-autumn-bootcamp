@@ -1,0 +1,14 @@
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.logo-wrapper img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.button-container {
+  width: 239px;
+  height: 47px;
+}

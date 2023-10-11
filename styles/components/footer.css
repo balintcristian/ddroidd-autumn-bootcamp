@@ -16,4 +16,5 @@
   font-family: var(--font-family-regular);
   font-weight: var(--font-weight-regular);
   font-size: 36px;
+  color: var(--white);
 }
