@@ -4,6 +4,8 @@
 @import "./components/page.css";
 @import "./components/button.css";
 @import "./pages/home.css";
+@import "./pages/form.css";
+
 body {
   margin: 0px;
   padding: 0px;
