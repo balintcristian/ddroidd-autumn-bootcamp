@@ -5,7 +5,13 @@
   color: var(--prussian-blue);
   margin-top: 0;
 }
-
+.page h2,
+ul.form-values li {
+  font-family: var(--font-family-bold);
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  color: var(--black);
+}
 .mb {
   margin-bottom: 16px;
 }

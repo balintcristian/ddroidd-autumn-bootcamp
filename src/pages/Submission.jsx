@@ -28,7 +28,7 @@ const Submission = () => {
         <h1>Excellent!</h1>
         <h1 className="mb">See you in November 2023!</h1>
         <h2>Submission summary:</h2>
-        <ul>
+        <ul className="form-values">
           <li>First Name: {firstName}</li>
           <li>Last Name: {lastName}</li>
           <li>Phone Number: {phoneNumber}</li>
