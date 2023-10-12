@@ -12,3 +12,7 @@
   width: 239px;
   height: 47px;
 }
+
+.page .button-container.align-center {
+  justify-content: center;
+}

@@ -1,0 +1,11 @@
+.page h1 {
+  font-family: var(--font-family-bold);
+  font-weight: var(--font-weight-bold);
+  font-size: 48px;
+  color: var(--prussian-blue);
+  margin-top: 0;
+}
+
+.mb {
+  margin-bottom: 16px;
+}

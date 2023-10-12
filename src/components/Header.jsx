@@ -1,15 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const pathname = window.location.pathname;
   const handleClick = () => {
-    console.log("click");
+    navigate("/form");
   };
   return (
     <header className="header">
       <img src="/assets/img/ddroidd_logo.svg"></img>
       <p>Autumn - Winter Bootcamp</p>
       <div className="button-container">
-        <Button onClick={handleClick} text="Join us" />
+        {pathname == "/" && <Button onClick={handleClick} text="Join us" />}
       </div>
     </header>
   );
